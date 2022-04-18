@@ -1,0 +1,6 @@
+Parameter	Low	Initial	High
+CL_percell 1e-9	2.592e-06	1e-5
+Km 1e-6	0.0004538	1e-2
+Kc 1e-7	0.0003329	1e-3
+F_extracellular 1e-1	0.8575	1
+Knew 1e-6	0.0003329	1e-1
