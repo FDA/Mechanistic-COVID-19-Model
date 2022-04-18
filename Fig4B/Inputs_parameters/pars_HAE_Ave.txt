@@ -1,5 +1,0 @@
-CL_percell 2.417e-06
-Km 0.0002541
-Kc 2.446e-05
-F_extracellular 0.3926
-Knew 0.006602
