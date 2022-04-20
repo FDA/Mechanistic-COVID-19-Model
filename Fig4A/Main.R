@@ -10,9 +10,9 @@ library(deSolve)
 
 isWindows<-Sys.info()[["sysname"]]=="Windows"
 parser<-OptionParser()
-parser<-add_option(parser, c("-p", "--popNum"), default="2000", help="population number")
+parser<-add_option(parser, c("-p", "--populationSize"), default="2000", help="population size")
 args<-parse_args(parser)
-popNum=args$popNum
+populationSize=args$populationSize
 print(sessionInfo())
 data_RMD=read.csv("data/all.csv")
 data_RMD=data_RMD[data_RMD["time"]!=2,] 
@@ -40,7 +40,7 @@ drugsweeps_plotop=drugsweepsop1=c()
 ttt<-read.csv(paste0("input_parameters/9apars.csv"),header=T)
 Allpar=ttt
 Allpar=Allpar[,-1]
-for (ip1 in c(seq(1,popNum,1))) {
+for (ip1 in c(seq(1,populationSize,1))) {
 	parsin=Allpar[ip1,]
 	for(concj in concvec){		
 		expData=data_RMD[data_RMD$dose==concj,][,c("time","M")]
@@ -102,8 +102,8 @@ p_paper=ggplot(data=TP,group=conc,color=as.factor(conc)) +
 		scale_fill_manual(values=c("gray", "gray", "gray", "gray", "gray","gray"))+
 		scale_shape_manual(values=c(15,16,17,0,1,2))+ 
 		scale_colour_discrete("dose(mg)")+
-		guides(color = FALSE, size = FALSE,fill = FALSE, shape=guide_legend(title="dose(mg)"))+
-		labs(x ="time (hr)", y = "RMD in Plasma (ng/ml)")+ theme_bw()+ theme(legend.position = c(0.8, 0.6))
+		guides(color = FALSE, size = FALSE,fill = FALSE, shape=guide_legend(title="Dose (mg)"))+
+		labs(x ="Time (hour)", y = "Remdisivir in plasma (ng/ml)")+ theme_bw()+ theme(legend.position = c(0.8, 0.6))
 ggsave(sprintf("results/Figure4A.png"),p_paper,width=3.38, height=3.38)
 print("************************************************************")
 print("--------------*******************************---------------")
