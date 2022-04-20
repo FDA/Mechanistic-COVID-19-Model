@@ -1,27 +1,31 @@
 # This code generates "Figure 4 (a) Calibration of the PK model." 
+**Author:** Mohammadreza Samieegohar
 
-## Running the code---------------------------------------------------------
+## Running
+Executing **Main.R** generates Figure 4a by simulating a virtual population of 2000 subjects. 
+
+<br/>
+For generating the figure for a virtual population of a different size (for example, 113 subjects), following option can be used: _-p 113_
+ 
+or, by changing the default virtual population size from _2000_ to _113_ in **Main.R** in the following way:
+
+_parser<-add_option(parser, c("-p", "--populationSize"), default="113", help="population size")_
+
+
+## Running the code
 All simulations are run in R-4.0.2.
 
 This code uses the following R packages: ggplot2, gridExtra, optparse, deSolve
 
-## Folders and Files-------------------------------------------------------
-"data"        			includes the experimental data
+## Folders and Files
+"Main.R" 				is the main code for generating the figure
+
 "results"     			includes the output figures
+
 "input_parameters" 		includes the input data
+
+"data"        			includes the experimental data
+
 "funs" 					includes the helper functions
-"Main.R" 				is the main code for generating the figure 4a
 
-## Running-----------------------------------------------------------------
-The default is to generate  Figures 4a by using a 2000 virtual population 
-Rscript Main.R
-for generating figure by different virtual population (for example virtual population=113), following option is used:
 
-Rscript Main.R -p 113
-
-Or
-change the default value from "2000" to "113" in Main.R
-parser<-add_option(parser, c("-p", "--popNum"), default="113", help="population number")
-####-----------------------------------------------------
-The "readme" file and codes are written by:
-Mohammadreza Samieegohar
