@@ -36,17 +36,17 @@ IFNAalpha0<-read.csv(paste0("Data_Covid/IFNAalpha/","IFNA_Fig1A_withmaxmin",".cs
 IFNAalpha=data.frame(cbind(unique(IFNAalpha0$Day),unique(IFNAalpha0$INFA_mean_pgperml),unique(IFNAalpha0$min),unique(IFNAalpha0$max))) 
 colnames(IFNAalpha)=c("Day","INFA_mean_pgperml","Imin","Imax") 
 IFNAalpha=IFNAalpha[IFNAalpha$Day!=8,]
-IFNAalpha$INFA_mean_pgperml=12*IFNAalpha$INFA_mean_pgperml    
-IFNAalpha$Imin=12*IFNAalpha$Imin
-IFNAalpha$Imax=12*IFNAalpha$Imax
+IFNAalpha$INFA_mean_pgperml=1*IFNAalpha$INFA_mean_pgperml    
+IFNAalpha$Imin=1*IFNAalpha$Imin
+IFNAalpha$Imax=1*IFNAalpha$Imax
 IFA_sever=read.csv("Data_Covid/IFNAalpha/IFA_sever.csv")
 IFA_sever=data.frame(IFA_sever)
-IFA_sever$IFN_S=IFA_sever$IFN_S*12*.1
+IFA_sever$IFN_S=IFA_sever$IFN_S*1*.1
 IFNAalpha=IFNAalpha[IFNAalpha$Day<23,] 		
 IFNAalpha$Time=(IFNAalpha$Day+addday)*24
 IFA_sever=IFA_sever[IFA_sever$Day<23,] 		
 IFA_sever$Time=(IFA_sever$Day+addday)*24
-if (IFNAalpha$Imax[2]>200) {IFNAalpha$Imax[2]=200}
+if (IFNAalpha$Imax[2]>200/10) {IFNAalpha$Imax[2]=200/10}
 p5<-ggplot()
 if (caseMS=="mildReady") {
 	p5<-p5+geom_point(data=IFNAalpha, aes(x=Time, y=INFA_mean_pgperml), size=point_size, alpha=1, color="black")
@@ -56,9 +56,11 @@ if (caseMS=="mildReady") {
 if (caseMS=="severReady") {
 	p5<-p5+geom_point(data=IFA_sever, aes(x=Time, y=IFN_S), size=point_size, alpha=1, color="black")
 }
-lim=c(-5,200)
-p5<-p5+geom_line(data=out_plot1, aes(x=time, y=IFNA1), size=line_size, alpha=1,linetype = "solid")
-p5<-p5+ylab(paste0("IFN Alpha \n (pg/ml)"))+ylim(0,200)+xlim(0,576)+scale_y_continuous(expand = c(0, 0), limits = lim) +
+lim=c(-1,200/10)
+print("dddd")
+print(max(IFNAalpha$Imax))
+p5<-p5+geom_line(data=out_plot1, aes(x=time, y=IFNA1/12), size=line_size, alpha=1,linetype = "solid")
+p5<-p5+ylab(paste0("IFN Alpha \n (pg/ml)"))+ylim(0,200/10)+xlim(0,576)+scale_y_continuous(expand = c(0, 0), limits = lim) +
 theme_bw()
 p5<-p5+xlab(paste0("Time post infection(hr)"))+theme(axis.text=element_text(size=numsiz),axis.title.y=element_text(size=labsiz,face="bold"))+theme(axis.title.x = element_blank(), axis.text.x = element_blank())
 p6<-ggplot()
