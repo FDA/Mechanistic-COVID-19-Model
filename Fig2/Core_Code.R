@@ -185,7 +185,7 @@ if (i1!=0) {
 	for (ti1 in seq(0,max(out_plot1[,"time"]),2)) { 
 		
 		tout_plot1=Bioout_plot_paperall[Bioout_plot_paperall[,1]==ti1,]
-		tq=(lapply(tout_plot1,quantile,probs=c(0.1,.9),na.rm=TRUE))
+		tq=(lapply(tout_plot1,quantile,probs=c(0.05,.95),na.rm=TRUE))
 		
 		BIL6q=rbind(BIL6q,c(ti1,tq$IL6))
 		BFreeVirusq=rbind(BFreeVirusq,c(ti1,tq$FreeVirus))
