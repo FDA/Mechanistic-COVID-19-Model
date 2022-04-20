@@ -1,12 +1,8 @@
 # This code generates "Figure 4 (a) Calibration of the PK model." 
 
 ## Running the code---------------------------------------------------------
-All simulations are run in R-4.0.2 
-This code uses the following R packages:
-library(ggplot2)
-library(gridExtra)
-library(optparse)
-library(deSolve)
+All simulations are run in R-4.0.2.
+This code uses the following R packages: ggplot2, gridExtra, optparse, deSolve
 
 ## Folders and Files-------------------------------------------------------
 "data"        			includes the experimental data
