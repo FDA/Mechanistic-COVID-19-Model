@@ -1,7 +1,7 @@
 # This code generates "Figure 4 (a) Calibration of the PK model." 
 **Author:** Mohammadreza Samieegohar
 
-## Running
+## Execution
 Executing **Main.R** generates Figure 4a by simulating a virtual population of 2000 subjects. 
 
 For generating the figure for a virtual population of a different size (for example, 113 subjects), following option can be used: -p 113
