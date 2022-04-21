@@ -9,13 +9,13 @@ library(gridExtra)
 library(deSolve)
 isWindows<-Sys.info()[["sysname"]]=="Windows"
 parser<-OptionParser()
-parser<-add_option(parser, c("-c", "--case"), default="Optimum",type="character", help="Population or Optimum")
-parser<-add_option(parser, c("-p", "--popNum"), default="2000", help="population number")
+parser<-add_option(parser, c("-c", "--case"), default="Population",type="character", help="Population or Optimum")
+parser<-add_option(parser, c("-p", "--populationSize"), default="2000", help="population size")
 args<-parse_args(parser)
-popNum=args$popNum
+populationSize=args$populationSize
 print(sessionInfo())
 case=args$case
-github="Fig4B/"
+github="results/"
 caseN="HAE_Ave"
 parsall=c("1apars")
 ftn=0
@@ -102,7 +102,7 @@ for (ft in 1) {
     method="lsoda",atol = 1e-6, rtol = 1e-6)})	
 	out_plotpp=data.frame(out_plotpp)
 	out_plot1_opt0=out_plotpp
-	if (case=="Optimum"){PoPcase=10}else{PoPcase=popNum}	
+	if (case=="Optimum"){PoPcase=10}else{PoPcase=populationSize}	
 	for (ip1 in c(seq(1,PoPcase,1))) {			
 		out_plot=c()
 		parsin=Allpar[ip1,]		
@@ -153,8 +153,9 @@ for (ft in 1) {
 		position=position_dodge(0.05))		
 		p4<-p4+geom_line(data=out_plot1_opt0, aes(x=time, y=TP), size=0.85, alpha=.85,linetype = "solid",color = "black")
 		p4<-p4+geom_ribbon(data=TP,aes(x=time,ymin=qmin,ymax=qmax),alpha=0.3)
-		p4<-p4+ylab(paste0("TP"))
-		p4<-p4+ylab(paste0("TP (uM)"))+xlab(paste0("Time post infection (hours)"))+ theme_bw()
+		# p4<-p4+ylab(paste0("TP"))
+		p4<-p4+ylab(paste0("Intracellular TP (uM)"))+xlab(paste0("Time post incubation with remedisivir (hour)"))+ theme_bw()
+		# p4<-p4+ylab(paste0("TP (uM)"))+xlab(paste0("Time post infection (hours)"))+ theme_bw()
 		ggsave(paste0(github,"/","Population.png"), p4, width=3.38, height=3.38)
 		print("************************************************************")
 		print("--------------*******************************---------------")
@@ -168,8 +169,8 @@ for (ft in 1) {
 		geom_errorbar(data=expData,aes(x=time,ymin=mind, ymax=maxd),width=2,
 		position=position_dodge(0.05))
 		p4<-p4+geom_line(data=out_plot1_opt0, aes(x=time, y=TP), size=0.85, alpha=.85,linetype = "solid",color = "black")	
-		p4<-p4+ylab(paste0("TP"))
-		p4<-p4+ylab(paste0("TP (uM)"))+xlab(paste0("Time post infection (hours)"))+ theme_bw()
+		# p4<-p4+ylab(paste0("TP"))
+		p4<-p4+ylab(paste0("Intracellular TP (uM)"))+xlab(paste0("Time post incubation with remedisivir (hour)"))+ theme_bw()
 		ggsave(paste0(github,"/","Optimum.png"), p4, width=3.38, height=3.38)
 		print("************************************************************")
 		print("--------------*******************************---------------")

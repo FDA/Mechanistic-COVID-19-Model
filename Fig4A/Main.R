@@ -7,7 +7,6 @@ library(optparse)
 library(ggplot2)
 library(gridExtra)
 library(deSolve)
-
 isWindows<-Sys.info()[["sysname"]]=="Windows"
 parser<-OptionParser()
 parser<-add_option(parser, c("-p", "--populationSize"), default="2000", help="population size")
