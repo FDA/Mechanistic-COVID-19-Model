@@ -1,4 +1,4 @@
-# This code generates "Figure 4 (a) Calibration of the PK model." 
+## Figure 4 (a) Calibration of the PK model
 **Author:** Mohammadreza Samieegohar
 
 ## Execution
