@@ -1,4 +1,4 @@
-# This code generates "Figure 4 (b) Intracellular nucleoside triphosphate (TP) concentration following in vitro incubation with the parent drug remdesivir" 
+## Figure 4 (b) Intracellular nucleoside triphosphate (TP) concentration following in vitro incubation with the parent drug remdesivir
 **Author:** Mohammadreza Samieegohar
 
 ## Execution
