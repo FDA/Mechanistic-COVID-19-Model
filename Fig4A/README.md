@@ -12,15 +12,15 @@ _parser<-add_option(parser, c("-p", "--populationSize"), default="113", help="po
 
 
 ## Folders and files
-"Main.R" 				is the main code for generating the figure
+**Main.R** is the main code for generating the figure
 
-"results"     			includes the output figures
+**results** includes the output figures
 
-"input_parameters" 		includes the input data
+**input_parameters** includes the input data
 
-"data"        			includes the experimental data
+**data** includes the experimental data
 
-"funs" 					includes the helper functions
+**funs** includes the helper functions
 
 
 ## Software
