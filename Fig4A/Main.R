@@ -19,7 +19,7 @@ data_RMD=data_RMD[data_RMD["time"]!=2,]
 data_RMD=data_RMD[data_RMD["time"]<4.11,]
 data_RMD["time"]=data_RMD["time"]*3600
 concvec=unique(data_RMD$dose)
-tmp<-read.table(paste0("input_parameters/hergmod_states.txt"), col.names=c("param","value"))
+tmp<-read.table(paste0("input_parameters/states.txt"), col.names=c("param","value"))
 states<-setNames(tmp$value, tmp$param)
 hergmod1<-function(t, state, pars) {
 	with(as.list(c(state, pars)),{				
@@ -80,7 +80,7 @@ for (ci1 in concvec) {
 	ftime1=seq(0,ftimemax,100)
 	for (ti1 in ftime1) {
 		tout_plot1=out_plot_all[out_plot_all[,"time"]==ti1 & out_plot_all[,"concj"]==ci1,]
-		tq=(lapply(tout_plot1,quantile,probs=c(0.025,0.975),na.rm = TRUE))
+		tq=(lapply(tout_plot1,quantile,probs=c(0.05,0.95),na.rm = TRUE))
 		
 		TP=rbind(TP,c(ti1,ci1,tq$CRv))
 	}
@@ -104,7 +104,7 @@ p_paper=ggplot(data=TP,group=conc,color=as.factor(conc)) +
 		scale_colour_discrete("dose(mg)")+
 		guides(color = FALSE, size = FALSE,fill = FALSE, shape=guide_legend(title="dose(mg)"))+
 		labs(x ="time (hr)", y = "RMD in Plasma (ng/ml)")+ theme_bw()+ theme(legend.position = c(0.8, 0.6))
-ggsave(sprintf("results/Figure4A.png"),p_paper,width=3.38, height=3.38)
+ggsave(sprintf("Fig4a/Figure4A.png"),p_paper,width=3.38, height=3.38)
 print("************************************************************")
 print("--------------*******************************---------------")
 print("------------------------*********---------------------------")

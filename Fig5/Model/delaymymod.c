@@ -104,9 +104,9 @@ if (*t >  48 ) {
 lagvalue(T3, nr3, Nout3, ytau3);
 }
 ytau[2] = ytau3[0];
-ydot[0] = 1/unnamed*(-K14*y[0]+K13*y[2]-K34*y[0]*K40*ytau[0]-K28*y[7]*y[0]-K288*y[5]*y[0]);
+ydot[0] = 1/unnamed*(-K14*y[0]+(1/(1+pow(abs(y[24]/K1314),Kn1)))*K13*y[2]-K34*y[0]*K40*ytau[0]-K28*y[7]*y[0]-K288*y[5]*y[0]);
 ydot[1] = 1/unnamed*(K16*y[0]-K18*y[1]-K555*y[1]*y[17]+K556*y[1]*y[16]);
-ydot[2] = 1/unnamed*(-K13*y[2]+K11*y[1]*y[3]-K34*y[2]*K40*ytau[0]-K28*y[7]*y[2]-K288*y[5]*y[2]);
+ydot[2] = 1/unnamed*(-K13*y[2]*(1/(1+pow(abs(y[24]/K1314),Kn1)))+K11*y[1]*y[3]-K34*y[2]*K40*ytau[0]-K28*y[7]*y[2]-K288*y[5]*y[2]);
 ydot[3] = 1/unnamed*(-K11*y[1]*y[3]+K27*y[6]-K26*y[7]*y[3]-K288*y[5]*y[3]+Krenew*(4e8-y[3]-y[6]-y[0]-y[2]));
 ydot[4] = 1/unnamed*(K48*y[1]*y[10]-K53*y[4]-0);
 ydot[5] = 1/unnamed*(-K29*y[5]+K15*y[4]+K49*y[0]+K245*ytau[2]);
@@ -122,6 +122,13 @@ ydot[14] = K11*y[1]*y[3];
 ydot[15] = K322*(1E5-y[15])-K3222*y[1]*y[15];
 ydot[17] = K400*8*2*y[8]-K401*y[17];
 ydot[16] = K500*8*2*y[8]-K501*y[16];
+ydot[18] = -Kp14*y[18]+Kp41*y[19]+-KpC*y[18]+y[20]/2;
+ydot[19] = -(-Kp14*y[18]+Kp41*y[19]);
+ydot[20] = 0;
+ydot[21] = CL_percell*(y[22]*F_extracellular)/V_percell-CL_percell*(y[21]*F_intracellular)/V_percell-Km*(y[21]*F_intracellular)-Knew*y[21];
+ydot[22] = ((-Kp14*y[18]+Kp41*y[19])-KpC*y[18]+y[20]/2)/V1*1000/1000000000/603;
+ydot[23] = Kcell*y[23];
+ydot[24] = Km*(y[21]*F_intracellular)-Kc*y[24];
 yout[0] = ytau[0];
 yout[1] = ytau[1];
 yout[2] = ytau[2];

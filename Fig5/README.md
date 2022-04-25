@@ -3,23 +3,34 @@
 ## Running the code---------------------------------------------------------
 All simulations are run in R-4.0.2 
 This code uses the following R packages:
-library(ggplot2)
-library(grid)
-library(optparse)
+library(ggplot2   [version 3.3.3])
+library(gridExtra [version 2.3]  )
+library(grid      [version 4.0.2])
+library(optparse  [version 1.6.6])
+library(deSolve   [version 1.28] )
 
 ## Folders and Files-------------------------------------------------------
-"Data_Covid"        includes the experimental data
-"Fig5 includes"     includes the output figures
-"Inputs_parameters" includes the input data
-"Main.R" 			is the main code for generating the figures 5 a,b,c,d
-
+"Data_Covid"            includes the CTT clinical data.
+"Fig5"                  includes the output figures.
+"Inputs_parameters"     includes the input parameters and sub-population IDs.
+"Main.R" 			    is the main code for generating the figures 5 a,b,c,d.
+"Calibration.R" 		is a subroutine that calculate the calibration (placebo)    data.
+"Validation.R" 			is a subroutine that calculate the validation  (remdesivir) data.
+"eventRMD.R"            is a subroutine that used in "Validation.R" for remdesivir injection scheme.
 ## Running-----------------------------------------------------------------
-The default is to generate "mild" cases which are Figures 5a-b
-for generating the Severe, figures(5c-d), following option is used:
-Rscript Main.R -c severe
-Or
-change the default value from "mild" to "severe" in Main.R
-parser<-add_option(parser, c("-c", "--Runcase"), default="severe",type="character", help="severe or mild")
+*To generate Figure 5,
+   In severe cases (figures b,d) by using an *R version of the model:
+		Rscript Main.R -d severe -m R
+
+   In mild cases   (figures a,c) by using an *R version of the model:
+		Rscript Main.R -d mild -m R
+
+   In severe cases (figures b,d) by using an *so version of the model:
+		Rscript Main.R -d severe -m C
+
+   In mild cases   (figures a,c) by using an *so version of the model:
+		Rscript Main.R -d mild -m C
+
 ####-----------------------------------------------------
 The "readme" file and codes are written by:
 Mohammadreza Samieegohar

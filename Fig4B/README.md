@@ -3,23 +3,22 @@
 ## Running the code---------------------------------------------------------
 All simulations are run in R-4.0.2 
 This code uses the following R packages:
-library(ggplot2)
-library(gridExtra)
-library(optparse)
-library(deSolve)
+library(ggplot2   [version 3.3.3])
+library(gridExtra [version 2.3]  )
+library(optparse  [version 1.6.6])
+library(deSolve   [version 1.28] )
 
 ## Folders and Files-------------------------------------------------------
-"Fig4B"     			includes the output figures
+"Fig4b"     			includes the output figures
 "Inputs_parameters" 	includes the input data
-"funs" 					includes the helper functions
-"models" 				includes the model parameters and states
-"Main.R" 				is the main code for generating the figure 4B
+"Main.R" 				is the main code for generating the figure 4b
 
 ## Running-----------------------------------------------------------------
 The default is to generate  Figures 4b Optimum curve.
 Rscript Main.R
 
-For generating the figure 4b , Optimal and uncertainty band (2000 virtual population) , the following option needs to use: 
+For generating the figure 4b, Optimal and uncertainty band (2000 virtual population), the following option needs to be used:
+ 
 Rscript Main.R -c Population
 
 For performing a faster run, the virtual population (for example, 113) can be adjusted by: 

@@ -15,23 +15,23 @@ args<-parse_args(parser)
 popNum=args$popNum
 print(sessionInfo())
 case=args$case
-github="Fig4B/"
+github="Fig4b/"
 caseN="HAE_Ave"
 parsall=c("1apars")
 ftn=0
 for (ft in 1) {
 	parnums=parsall[1]
-	tmp<-read.table(paste0("models/hergmod_states.txt"), col.names=c("param","value"))
+	tmp<-read.table(paste0("Inputs_parameters/hergmod_states.txt"), col.names=c("param","value"))
 	states<-setNames(tmp$value, tmp$param)
-	tmp<-read.table(paste0("models/hergmod_pars.txt"), col.names=c("param","value"))
+	tmp<-read.table(paste0("Inputs_parameters/hergmod_pars.txt"), col.names=c("param","value"))
 	pars<-setNames(tmp$value, tmp$param)
-	pp<-read.table("models/hergmod_drug_param_bounds.txt",header=T,as.is=T)
-	pnames<-pp$Parameter
-	high_bounds<-pp$High
-	low_bounds<-pp$Low
+#	pp<-read.table("Inputs_parameters/hergmod_drug_param_bounds.txt",header=T,as.is=T)
+#	pnames<-pp$Parameter
+#	high_bounds<-pp$High
+#	low_bounds<-pp$Low
 	pmax<-10000
-	encode_pars<-function(pars) pmax*log10(pars/low_bounds)/log10(high_bounds/low_bounds)
-	decode_pars<-function(ind) low_bounds*(high_bounds/low_bounds)^(ind/pmax)
+#	encode_pars<-function(pars) pmax*log10(pars/low_bounds)/log10(high_bounds/low_bounds)
+#	decode_pars<-function(ind) low_bounds*(high_bounds/low_bounds)^(ind/pmax)
 	Verp6=cbind(c(8*3600,24*3600,48*3600),c(1.21,.5,.61)/10^6/.665)       
 	Calu3=cbind(c(8*3600,24*3600,48*3600),c(2.87,2.17,2.00)/10^6/2.7)     
 	HAE1=cbind(c(8*3600,24*3600,48*3600),c(18.3,15.3,2.45))               
@@ -63,7 +63,6 @@ for (ft in 1) {
 					
 				}) 
 	}	
-	source("funs/deWrapper.R")
 	objfun<-function(ind){		
 		parsin=(ind)		
 		names(parsin)=names(pars)
@@ -83,8 +82,8 @@ for (ft in 1) {
 		(yPred[,"TP"]-expData[,"NTP"])
 		
 	}		
-	initpar=pp$Initial
-	names(initpar)=pp$Parameter
+#	initpar=pp$Initial
+#	names(initpar)=pp$Parameter
 	parsin=pars	
 	ttt<-read.csv(paste0("Inputs_parameters/1apars.csv"),header=T)
 	Allpar=ttt
@@ -103,7 +102,8 @@ for (ft in 1) {
 	out_plotpp=data.frame(out_plotpp)
 	out_plot1_opt0=out_plotpp
 	if (case=="Optimum"){PoPcase=10}else{PoPcase=popNum}	
-	for (ip1 in c(seq(1,PoPcase,1))) {			
+	for (ip1 in c(seq(1,PoPcase,1))) {	
+		
 		out_plot=c()
 		parsin=Allpar[ip1,]		
 		try({out_plot <- ode(states, ftime,func=hergmod1,parms=parsin,
