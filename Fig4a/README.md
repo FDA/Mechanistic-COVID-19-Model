@@ -25,6 +25,6 @@ Or
 
 Change the default value from "2000" to "113" in Main.R  
 parser<-add_option(parser, c("-p", "--popNum"), default="113", help="population number")  
-####-----------------------------------------------------
-The "readme" file and codes are written by:  
+####-----------------------------------------------------  
+The "readme" file and codes are written by:   
 Mohammadreza Samieegohar
