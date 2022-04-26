@@ -7,7 +7,7 @@ Maniscript title:
 #### "Disease model calibration. Left column is mild case"
 
 ### The "Fig4a" folder includes the code and data for generating Figure 4a in the main maniscript.
-#### "Figure 4 (a) Calibrating of the PK model."
+#### "Calibrating of the PK model."
 
 ### The "Fig4b" folder includes the code and data for generating Figure 4b in the main maniscript.
 #### "Intracellular nucleoside triphosphate (TP) concentration following in vitro incubation with the parent drug remdesivir"
