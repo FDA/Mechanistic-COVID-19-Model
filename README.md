@@ -4,7 +4,7 @@ Maniscript title:
 
 ## Folders---------------------------------------------------------
 ### The "Fig2"  folder includes the code and data for generating Figure 2  in the main maniscript.
-#### "Disease model calibration. Left column is mild case"
+#### "Disease model calibration."
 
 ### The "Fig4a" folder includes the code and data for generating Figure 4a in the main maniscript.
 #### "Calibrating of the PK model."
