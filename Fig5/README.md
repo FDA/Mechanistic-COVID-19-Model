@@ -31,6 +31,6 @@ library(deSolve   [version 1.28] )
    In mild cases   (figures a,c) by using an *so version of the model:  
 		Rscript Main.R -d mild -m C  
 
-####-----------------------------------------------------
+####-----------------------------------------------------   
 The "readme" file and codes are written by:  
 Mohammadreza Samieegohar
