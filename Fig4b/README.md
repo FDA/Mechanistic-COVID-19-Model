@@ -18,7 +18,6 @@ The default is to generate  Figures 4b Optimum curve.
 Rscript Main.R  
 
 For generating the figure 4b, Optimal and uncertainty band (2000 virtual population), the following option needs to be used:  
- 
 Rscript Main.R -c Population  
 
 For performing a faster run, the virtual population (for example, 113) can be adjusted by:  
