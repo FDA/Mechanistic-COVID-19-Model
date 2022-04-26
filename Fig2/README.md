@@ -1,14 +1,14 @@
 ## This set of code generates Figure 2 (Disease model calibration) in the manuscript-------
-It runs simulations for a population of 2000 virtual patients to produce time courses of various COVID-19 disease biomarkers (viral titer, cytokines, antibodies, etc.) and overlay them with clinical data. Two populations (mild and severe) of virtual patients are provided. In addition to simulating the whole population, an option is also given in the code to simulate a single best-fit (optimal) patient, which is much faster.
+It runs simulations for a population of 2000 virtual patients to produce time courses of various COVID-19 disease biomarkers (viral titer, cytokines, antibodies, etc.) and overlay them with clinical data. Two populations (mild and severe) of virtual patients are provided. In addition to simulating the whole population, an option is also given in the code to simulate a single best-fit (optimum) patient, which is much faster.
 
 ## Requirement for running the code---------------------------------------------------------
 All simulations are run in R-4.0.2   
 This code uses the following R packages:  
-library(ggplot2   [version 3.3.3])  
-library(gridExtra [version 2.3]  )  
-library(grid      [version 4.0.2])  
-library(optparse  [version 1.6.6])   
-library(deSolve   [version 1.28] )  
+ggplot2   [version 3.3.3]  
+gridExtra [version 2.3]  
+grid      [version 4.0.2] 
+optparse  [version 1.6.6]   
+deSolve   [version 1.28] 
 
 ## Description of Folders and Files-------------------------------------------------------
 "Data_Covid"        	includes the experimental data  
