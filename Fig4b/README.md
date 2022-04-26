@@ -21,7 +21,7 @@ For generating the figure 4b, Optimal and uncertainty band (2000 virtual populat
  
 Rscript Main.R -c Population  
 
-For performing a faster run, the virtual population (for example, 113) can be adjusted by:   
+For performing a faster run, the virtual population (for example, 113) can be adjusted by:  
 Rscript Main.R -c Population -p 113  
 
 Or  
@@ -29,6 +29,6 @@ Or
 The options can be adjusted in Main.R  
 parser<-add_option(parser, c("-c", "--case"), default="Optimum",type="character", help="Population or Optimum")  
 parser<-add_option(parser, c("-p", "--popNum"), default="2000", help="population number")  
-####-----------------------------------------------------
-The "readme" file and codes are written by:  
+####-----------------------------------------------------  
+The "readme" file and codes are written by:   
 Mohammadreza Samieegohar
