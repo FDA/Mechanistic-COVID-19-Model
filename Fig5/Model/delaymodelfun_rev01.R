@@ -77,34 +77,35 @@ ReactionFlux9=Krenew*(4e8-EpitheliumLung-ResistantEpithelium-Epitheliumwithrepli
 
 # The differential equations----------------------------------
 ## Virus Life Cycle Module:-----------------------------------
-dEpitheliumwithreplicatedVirus=1/unnamed*(-ReactionFlux1+ReactionFlux1314*ReactionFlux3-ReactionFlux15-ReactionFlux22-ReactionFlux222) #Equation (26) in the supplementary document.  
-dFreeVirus=1/unnamed*(ReactionFlux2-ReactionFlux5-ReactionFlux55) #Equation (1) in the supplementary document. 
-dEpitheliumwithVirusparticle=1/unnamed*(-ReactionFlux1314*ReactionFlux3+ReactionFlux4-ReactionFlux14-ReactionFlux23-ReactionFlux233) #Equation (27) in the supplementary document.
+# The annotated equations are coresponses to the supplementary documant equations.
+dEpitheliumwithreplicatedVirus=1/unnamed*(-ReactionFlux1+ReactionFlux1314*ReactionFlux3-ReactionFlux15-ReactionFlux22-ReactionFlux222) #Equation (26)   
+dFreeVirus=1/unnamed*(ReactionFlux2-ReactionFlux5-ReactionFlux55) #Equation (1)  
+dEpitheliumwithVirusparticle=1/unnamed*(-ReactionFlux1314*ReactionFlux3+ReactionFlux4-ReactionFlux14-ReactionFlux23-ReactionFlux233) #Equation (27) 
 
 ## Immune systems Module:---------------------------------------------
-dEpitheliumLung=1/unnamed*(-ReactionFlux4+ReactionFlux18-ReactionFlux20-ReactionFlux200+ReactionFlux9) #Equation (6) in the supplementary document.
-dInfectedAPC=1/unnamed*(ReactionFlux6-ReactionFlux29-ReactionFlux32) #Equation (9) in the supplementary document.
-dIL6=1/unnamed*(-ReactionFlux7+ReactionFlux8+ReactionFlux88) #Equation (5) in the supplementary document.
-dResistantEpithelium=1/unnamed*(-ReactionFlux18+ReactionFlux20-ReactionFlux188) #Equation (7) in the supplementary document.
-dIFNA1=1/unnamed*(ReactionFlux19-ReactionFlux21) #Equation (4) in the supplementary document.
-dTcLymphnode=1/unnamed*(-ReactionFlux244+ReactionFlux26-ReactionFlux2444) #Equation (12) in the supplementary document.
-dActivatedAPCLymphnode=1/unnamed*(ReactionFlux25-ReactionFlux27) #Equation (10) in the supplementary document.
-dA=ReactionFlux66-ReactionFlux6 #Equation (8) in the supplementary document.
+dEpitheliumLung=1/unnamed*(-ReactionFlux4+ReactionFlux18-ReactionFlux20-ReactionFlux200+ReactionFlux9) #Equation (6) 
+dInfectedAPC=1/unnamed*(ReactionFlux6-ReactionFlux29-ReactionFlux32) #Equation (9) 
+dIL6=1/unnamed*(-ReactionFlux7+ReactionFlux8+ReactionFlux88) #Equation (5) 
+dResistantEpithelium=1/unnamed*(-ReactionFlux18+ReactionFlux20-ReactionFlux188) #Equation (7) 
+dIFNA1=1/unnamed*(ReactionFlux19-ReactionFlux21) #Equation (4) 
+dTcLymphnode=1/unnamed*(-ReactionFlux244+ReactionFlux26-ReactionFlux2444) #Equation (12) 
+dActivatedAPCLymphnode=1/unnamed*(ReactionFlux25-ReactionFlux27) #Equation (10) 
+dA=ReactionFlux66-ReactionFlux6 #Equation (8) 
 dEpiKilledbyIFN=ReactionFlux22+ReactionFlux23  #Death rate of epithelial cells induced by IFN. (Calculated for checking)
 dEpiKilledbyIL6=ReactionFlux222+ReactionFlux233+ReactionFlux200+ReactionFlux188 #Death rate of epithelial cells induced by IL6. (Calculated for checking)
 dEpiKilledbyTc=ReactionFlux15+ReactionFlux14 #Death rate of epithelial cells induced by TCell. (Calculated for checking)
 dEpiKilledbyVirus=ReactionFlux4 #Death rate of epithelial cells induced by Virus. (Calculated for checking)
-dTnaive=ReactionFlux266-ReactionFlux2666 #Equation (11) in the supplementary document.
-dIgM=ReactionFlux40 #Equation (13) in the supplementary document.
-dIgG=ReactionFlux50 #Equation (14) in the supplementary document.
+dTnaive=ReactionFlux266-ReactionFlux2666 #Equation (11) 
+dIgM=ReactionFlux40 #Equation (13) 
+dIgG=ReactionFlux50 #Equation (14) 
 
 ## PK Modules :---------------------------------------------
-dCR=ReactionFlux1311+ReactionFlux1312+ReactionFlux1313 #Equation (15) in the supplementary document.
-dCRP=-(ReactionFlux1311) #Equation (16) in the supplementary document.
-dKCon=0 #Equation (17) in the supplementary document.
-dC_intracellularRDV_total=ReactionFlux1319-ReactionFlux1320-ReactionFlux1315-ReactionFlux1318 #Equation (23) in the supplementary document.
-dC_extracellularRDV_total=ReactionFlux1321*1000/1000000000/603 #Equation (22) in the supplementary document.
-dcell_number=ReactionFlux1317 #Equation (20) in the supplementary document.
-dTP=ReactionFlux1315-ReactionFlux1316 #Equation (24) in the supplementary document.
+dCR=ReactionFlux1311+ReactionFlux1312+ReactionFlux1313 #Equation (15) 
+dCRP=-(ReactionFlux1311) #Equation (16) 
+dKCon=0 #Equation (17) 
+dC_intracellularRDV_total=ReactionFlux1319-ReactionFlux1320-ReactionFlux1315-ReactionFlux1318 #Equation (23) 
+dC_extracellularRDV_total=ReactionFlux1321*1000/1000000000/603 #Equation (22) 
+dcell_number=ReactionFlux1317 #Equation (20) 
+dTP=ReactionFlux1315-ReactionFlux1316 #Equation (24) 
     return(list(c(dEpitheliumwithreplicatedVirus,dFreeVirus,dEpitheliumwithVirusparticle,dEpitheliumLung,dInfectedAPC,dIL6,dResistantEpithelium,dIFNA1,dTcLymphnode,dActivatedAPCLymphnode,dA,dEpiKilledbyIFN,dEpiKilledbyIL6,dEpiKilledbyTc,dEpiKilledbyVirus,dTnaive,dIgG,dIgM,dCR,dCRP,dKCon,dC_intracellularRDV_total,dC_extracellularRDV_total,dcell_number,dTP)))
 })}
