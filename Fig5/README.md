@@ -1,4 +1,4 @@
-# This set of code generates Figure 5 (calibrating disease model using the clinical placebo survival curve in mild and sever cases) in the manuscript-------
+## This set of code generates Figure 5 (calibrating disease model using the clinical placebo survival curve in mild and sever cases) in the manuscript-------
 It runs sequential simulations for a population of 2000 virtual patients to calculate the percentage of recovered patients in the mild and severe patient groups for the placebo arm (calibration) and the remdesivire arm (validation), followed by a 100 virtual patient population sets that is randomly sampled from 2000 virtual patients (sample size equal to 100) to calculate the model's predicted mean and variablity of the recovered patients percentage and overlay them with clinical data.
 
 ## Running the code---------------------------------------------------------
