@@ -16,7 +16,7 @@ deSolve   [version 1.28]
 "Main.R"                is the main code for generating the figure 4b  
 </pre>
 ## Running simulations-----------------------------------------------------
-To generate Figure 4a, Just Optimum case (the single best-fit patient):    
+To generate Figure 4b, Just Optimum case (the single best-fit patient):    
  <pre>
     Under Linux, one simply run:    
     Rscript Main.R
