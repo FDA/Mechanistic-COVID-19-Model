@@ -1,4 +1,5 @@
 ## This code generates "Figure 4b Intracellular nucleoside triphosphate (TP) concentration following in vitro incubation with the parent drug remdesivir" 
+It runs Intracellular simulations for a population of 2000 virtual patients to produce nucleoside triphosphate (TP) concentration time course. In addition to simulating the whole population, an option is also given in the code to simulate a single best-fit (optimum) patient, which is much faster.
 
 ## Running the code---------------------------------------------------------
 All simulations are run in R-4.0.2   
