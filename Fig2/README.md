@@ -27,7 +27,9 @@ II) There is an *R   version that is a pure R implementation of the model. It ca
 PAHT: Model/delaymymod.R  
 
 Note: If you use non-linux operating system (e.g., windows, Mac, or a version of linux that cannot use the provided *so file directly), but you want to take advantage of the faster running for option I, you can compile the provided c source code for your own system. For details please see https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/SHLIB  
-Some modifications to Main.R will then be needed to tell the script to use the compiled model file you just created.
+Some modifications to Main.R will then be needed to tell the script to use the compiled model file you just created.  
+
+Also note that the figures in our manuscript were created by running the *so version of the model compiled on CentOS Linux Version 7. If you run the *so version of the model on other versions of linux, or run the *R version of the model on any other operation systems, the results may be slightly different due to machine-to-machine and platform-to-platform differences.
 
 ## Running simulations-----------------------------------------------------------------
 *To generate Figure 2, Just Optimum case (the single best-fit patient):    
