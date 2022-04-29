@@ -3,21 +3,24 @@ It runs simulations for a population of 2000 virtual patients to produce time co
 
 ## Requirement for running the code---------------------------------------------------------
 All simulations are run in R-4.0.2   
-This code uses the following R packages:  
+This code uses the following R packages: 
+<pre>
 ggplot2   [version 3.3.3]  
 gridExtra [version 2.3]  
 grid      [version 4.0.2]  
 optparse  [version 1.6.6]   
 deSolve   [version 1.28] 
-
+</pre>
 ## Description of Folders and Files-------------------------------------------------------
+<pre>
 "Data_Covid"        	includes the experimental data  
-"Fig2"    	 			includes the output figures  
+"Fig2"    	 	includes the output figures  
 "Inputs_parameters" 	includes the input data  
-"Model" 				includes the models in different formats  
-"Main.R" 				is the main code for generating the figure 2  
-"Plot_Optimum R" 		is a subroutine that is used in Main.R for plotting the Optimum case.  
+"Model" 		includes the models in different formats  
+"Main.R" 		is the main code for generating the figure 2  
+"Plot_Optimum R" 	is a subroutine that is used in Main.R for plotting the Optimum case.  
 "Plot_Population.R"     is a subroutine that is used in Main.R for plotting the Population case.  
+</pre>
 ## Description of the model -----------------------------------------------------------------
 Two different formats of the COVID-19 disease model are provided for running the code to generate Figure 2:  
 I)  There is a  *so  version of the model that is 		      compiled for linux, but Faster to run.   
@@ -32,6 +35,7 @@ Some modifications to Main.R will then be needed to tell the script to use the c
 Also note that the figures in our manuscript were created by running the *so version of the model compiled on CentOS Linux Version 7. If you run the *so version of the model on other versions of linux, or run the *R version of the model on any other operation systems, the results may be slightly different due to machine-to-machine and platform-to-platform differences.
 
 ## Running simulations-----------------------------------------------------------------
+<pre>
 *To generate Figure 2, Just Optimum case (the single best-fit patient):    
  
    1)The default is to generate Optimum case for mild patient by using an R version of the model:  
@@ -76,7 +80,7 @@ Also note that the figures in our manuscript were created by running the *so ver
    Of note, for any of the runs above, to use the compiled model (*.so version of the model) for faster running under linux, one should use the command line option -m. For example:    
 		Rscript Main.R -m C  
 
-
+</pre>
 
 ####-----------------------------------------------------  
 The "readme" file and codes are written by:    
