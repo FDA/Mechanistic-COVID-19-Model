@@ -1,4 +1,4 @@
-# This code generates "Figure 4 (a) Calibrating of the PK model." 
+## This code generates "Figure 4 (a) Calibrating of the PK model." 
 
 ## Running the code---------------------------------------------------------
 All simulations are run in R-4.0.2   
