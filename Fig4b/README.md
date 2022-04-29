@@ -17,16 +17,15 @@ deSolve   [version 1.28]
 </pre>
 ## Running simulations-----------------------------------------------------
 To generate Figure 2, Just Optimum case (the single best-fit patient):    
-  The default is to generate  Figures 4b Optimum curve. 
-  <pre>
+ <pre>
     Under Linux, one simply run:    
     Rscript Main.R
      
-   Under other operation systems (windows, Mac, etc.) after launching a R console:    
+    Under other operation systems (windows, Mac, etc.) after launching a R console:    
     source("Main.R")
  </pre>  
 To generating the figure 4b, Optimal and uncertainty band (2000 virtual population):
-   <pre>
+ <pre>
     Under Linux: 
     Rscript Main.R -c Population  
 
