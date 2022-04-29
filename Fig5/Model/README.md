@@ -1,4 +1,4 @@
-# This folder includes initial parameters and states names and models in different formats:
+## This folder includes initial parameters and states names and models in different formats:
 <pre>
 "delaymodelfun.R"    the *.R   format of model
 "delaymymod.c"       the *.c   format of model
