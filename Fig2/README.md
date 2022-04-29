@@ -35,9 +35,9 @@ Some modifications to Main.R will then be needed to tell the script to use the c
 Also note that the figures in our manuscript were created by running the *so version of the model compiled on CentOS Linux Version 7. If you run the *so version of the model on other versions of linux, or run the *R version of the model on any other operation systems, the results may be slightly different due to machine-to-machine and platform-to-platform differences.
 
 ## Running simulations-----------------------------------------------------------------
-<pre>
+
 *To generate Figure 2, Just Optimum case (the single best-fit patient):    
- 
+ <pre>
    1)The default is to generate Optimum case for mild patient by using an R version of the model:  
    
    Under Linux, one simply run:    
