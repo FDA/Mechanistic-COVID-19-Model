@@ -54,9 +54,10 @@ Also note that the figures in our manuscript were created by running the *so ver
    Under other operation systems (windows, Mac, etc.), one needs to change the default value from "mild" to "severe" in line 15 of Main.R below, then execute source("Main.R") in a console:    
    parser<-add_option(parser, c("-d", "--severity"), default="severe",type="character", help="severity group,options:'mild' or 'severe'")  
 
-    
+  </pre>
+  
 *To generate Figure 2, Optimum curve + uncertainty band (2000 virtual patients), which is the format of Figure 2 of the manuscript:  
-
+ <pre>
    1)To generate population simulaitons for mild cases by using an *R version of the model:  
    
    Under Linux:    
