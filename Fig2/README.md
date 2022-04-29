@@ -6,7 +6,7 @@ All simulations are run in R-4.0.2
 This code uses the following R packages:  
 ggplot2   [version 3.3.3]  
 gridExtra [version 2.3]  
-grid      [version 4.0.2] 
+grid      [version 4.0.2]  
 optparse  [version 1.6.6]   
 deSolve   [version 1.28] 
 
