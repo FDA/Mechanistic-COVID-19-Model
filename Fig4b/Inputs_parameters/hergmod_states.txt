@@ -1,5 +1,0 @@
-  C_intracellularRDV_total 0
-  C_extracellularRDV_total 1E-6
-  cell_number 0
-  TP 0
-  
