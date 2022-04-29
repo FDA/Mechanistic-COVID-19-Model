@@ -37,20 +37,29 @@ Some modifications to Main.R will then be needed to tell the script to use the c
 
 Also note that the figures in our manuscript were created by running the *so version of the model compiled on CentOS Linux Version 7. If you run the *so version of the model on other versions of linux, or run the *R version of the model on any other operation systems, the results may be slightly different due to machine-to-machine and platform-to-platform differences.
 
-## Running-----------------------------------------------------------------
+## Running simulations -----------------------------------------------------------------
+*To generate Figure 5, 
+The default is to generate plots of mild patient by using an R version of the model:
 <pre>
-*To generate Figure 5,  
-   In severe cases (figures b,d) by using an *R version of the model:  
-		Rscript Main.R -d severe -m R  
+Under Linux, one simply run: 
 
    In mild cases   (figures a,c) by using an *R version of the model:  
-		Rscript Main.R -d mild -m R  
-
+		Rscript Main.R
+		
+   In severe cases (figures b,d) by using an *R version of the model:  
+		Rscript Main.R -d severe 
+</pre>	
+Under other operation systems (windows, Mac, etc.), one needs to change the default value from "mild" to "severe" in line 15 of Main.R below, then execute source("Main.R") in a console: 
+<pre>	
+   parser<-add_option(parser, c("-d", "--severity"), default="severe",type="character", help="severity group,options:'mild' or 'severe'")  
+</pre>		
+Of note, for any of the runs above, to use the compiled model (*.so version of the model) for faster running under linux, one should use the command line option -m. For example:
+<pre>
    In severe cases (figures b,d) by using an *so version of the model:  
 		Rscript Main.R -d severe -m C  
 
    In mild cases   (figures a,c) by using an *so version of the model:  
-		Rscript Main.R -d mild -m C  
+		Rscript Main.R -m C  
 </pre>
 ####-----------------------------------------------------   
 The "readme" file and codes are written by:  
