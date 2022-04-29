@@ -17,16 +17,14 @@ deSolve   [version 1.28]
 "Main.R" 			is the main code for generating the figure 4a  
 </pre>
 ## Running-----------------------------------------------------------------
-The default is to generate  Figures 4a by using a 2000 virtual population   
+The default is to generate  Figures 4a by using a 2000 virtual population
+<pre>
+Under Linux, one simply run:
 	Rscript Main.R  
 	
-For generating figure by different virtual population (for example virtual population=113), following option is used:  
-    Rscript Main.R -p 113  
-    
-Or  
-
-Change the default value from "2000" to "113" in Main.R  
-parser<-add_option(parser, c("-p", "--popNum"), default="113", help="population number")  
+Under other operation systems (windows, Mac, etc.) after launching a R console:    
+        source("Main.R")
+</pre>
 ####-----------------------------------------------------  
 The "readme" file and codes are written by:   
 Mohammadreza Samieegohar
