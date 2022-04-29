@@ -32,7 +32,6 @@ To generating the figure 4b, Optimal and uncertainty band (2000 virtual populati
     Under other operation systems (windows, Mac, etc.), one needs to change the default value from "Optimum" to "Population" in line 12 of Main.R below, then     execute source("Main.R") in a console:    
     parser<-add_option(parser, c("-c", "--case"), default="Optimum",type="character", help="Population or Optimum")
   </pre>
- 
 ####-----------------------------------------------------  
 The "readme" file and codes are written by:   
 Mohammadreza Samieegohar
