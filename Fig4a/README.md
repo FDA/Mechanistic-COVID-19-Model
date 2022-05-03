@@ -1,5 +1,5 @@
 ## This code generates "Figure 4 (a) Calibrating of the PK model." 
-It runs PK simulations for a population of 2000 virtual patients and single best-fit (optimum) to produce remdesivir plasma concentration time course after two hours of intravenous administration of six different single loading doses (3, 10, 30, 75, 150, and 225 mg). 
+It runs PK simulations for a population of 2000 virtual patients and a single best-fit (optimum) patient to produce remdesivir plasma concentration time course after two hours of intravenous administration of six different single loading doses (3, 10, 30, 75, 150, and 225 mg). 
 ## Running the code---------------------------------------------------------
 All simulations are run in R-4.0.2   
 This code uses the following R packages: 
