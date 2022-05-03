@@ -1,5 +1,5 @@
 ## This code generates "Figure 4b Intracellular nucleoside triphosphate (TP) concentration following in vitro incubation with the parent drug remdesivir" 
-It runs Intracellular simulations for a population of 2000 virtual patients to produce nucleoside triphosphate (TP) concentration time course. In addition to simulating the whole population, an option is also given in the code to simulate a single best-fit (optimum) patient, which is much faster.
+It runs intracellular remdesivir PK simulations for a population of 2000 virtual patients to produce intracellular nucleoside triphosphate (TP) concentration time course inside HAE culture during in vitro incubation of remdesivir. In addition to simulating the whole population, an option is also given in the code to simulate a single best-fit (optimum) patient, which is much faster.
 
 ## Running the code---------------------------------------------------------
 All simulations are run in R-4.0.2   
@@ -17,7 +17,7 @@ deSolve   [version 1.28]
 "Main.R"                is the main code for generating the figure 4b  
 </pre>
 ## Running simulations-----------------------------------------------------
-To generate Figure 4b, Just Optimum case (the single best-fit patient):    
+*To generate Figure 4b, Just Optimum case (the single best-fit patient):    
  <pre>
     Under Linux, one simply run:    
     Rscript Main.R
@@ -25,7 +25,7 @@ To generate Figure 4b, Just Optimum case (the single best-fit patient):
     Under other operation systems (windows, Mac, etc.) after launching a R console:    
     source("Main.R")
  </pre>  
-To generating the figure 4b, Optimal and uncertainty band (2000 virtual population):
+*To generating the figure 4b, Optimal and uncertainty band (2000 virtual population, as in the manuscript):
  <pre>
     Under Linux: 
     Rscript Main.R -c Population  
