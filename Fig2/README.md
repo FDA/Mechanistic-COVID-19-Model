@@ -23,11 +23,11 @@ deSolve   [version 1.28]
 </pre>
 ## Description of the model -----------------------------------------------------------------
 Two different formats of the COVID-19 disease model are provided for running the code to generate Figure 2:  
-I)  There is a  *so  version of the model that is 		      compiled for linux, but Faster to run.   
-PAHT: Model/delaymodelfun.so  
+I)  There is a  *so  version of the model that is 		      compiled for linux, but faster to run.   
+PATH: Model/delaymodelfun.so  
 
-II) There is an *R   version that is a pure R implementation of the model. It can be run across platforms (operatign systems), but slower to run.  
-PAHT: Model/delaymymod.R  
+II) There is an *R   version that is a pure R implementation of the model. It can be run across platforms (operating systems), but slower to run.  
+PATH: Model/delaymymod.R  
 
 Note: If you use non-linux operating system (e.g., windows, Mac, or a version of linux that cannot use the provided *so file directly), but you want to take advantage of the faster running for option I, you can compile the provided c source code for your own system. For details please see https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/SHLIB  
 Some modifications to Main.R will then be needed to tell the script to use the compiled model file you just created.  
@@ -43,7 +43,7 @@ Also note that the figures in our manuscript were created by running the *so ver
    Under Linux, one simply run:    
 		Rscript Main.R  
 		
-   Under other operation systems (windows, Mac, etc.) after launching a R console:    
+   Under other operating systems (windows, Mac, etc.) after launching a R console:    
                 source("Main.R")
 
    2)To generate Optimum case for severe patient by using an *R version of the model:  
@@ -58,12 +58,12 @@ Also note that the figures in our manuscript were created by running the *so ver
   
 *To generate Figure 2, Optimum curve + uncertainty band (2000 virtual patients), which is the format of Figure 2 of the manuscript:  
  <pre>
-   1)To generate population simulaitons for mild cases by using an *R version of the model:  
+   1)To generate population simulaitons for severe cases by using an *R version of the model:  
    
    Under Linux:    
 		Rscript Main.R -d severe -c Population  
 		
-   Under other operation systems (windows, Mac, etc.), one needs to change the default value from "mild" to "severe" in line 15, and from "Optimum" to "Population" in line 16, of Main.R below, then execute source("Main.R") in a console:    
+   Under other operating systems (windows, Mac, etc.), one needs to change the default value from "mild" to "severe" in line 15, and from "Optimum" to "Population" in line 16, of Main.R below, then execute source("Main.R") in a R console:    
    
    parser<-add_option(parser, c("-d", "--severity"), default="severe",type="character", help="severity group,options:'mild' or 'severe'")   
    parser<-add_option(parser, c("-c", "--case"), default="Population", help="options: 'Population' or 'Optimum'")  
