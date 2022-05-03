@@ -1,5 +1,5 @@
 ## This set of code generates Figure 5 (calibrating and validating the full model based on the clinical endpoint of time to recovery) in the manuscript.
-It simulates the clinical trial of ACTT. 100 subpopulations (each subpopulation 100 virtual patients) were sampled from the 2000 virtual patients (used in Fig 2) to match the reported recovered% on each day in the placebo arm (model calibraiton). Then the same subpopulations went through remdesivir therapy to predict the recovered% on each day, which is then compared to the reported values in the remdesivir arm (model validation). Similar to ACTT, patients were stratified into mild and severe strata in Figure 5.
+It simulates the clinical trial of ACTT. 100 subpopulations (each subpopulation 100 virtual patients) were sampled from the 2000 virtual patients (used in Fig 2) to match the recovered% on each day in the placebo arm as reported by ACTT (model calibraiton). Then the same subpopulations went through remdesivir therapy simulation to predict the recovered% on each day, which is subsequently compared to the ACTT-reported values in the remdesivir arm (model validation). Similar to ACTT, patients were stratified into mild and severe strata in Figure 5.
 
 ## Running the code---------------------------------------------------------
 All simulations are run in R-4.0.2   
