@@ -1,0 +1,2 @@
+states <- c(
+EpitheliumwithreplicatedVirus=0,FreeVirus=0.043,EpitheliumwithVirusparticle=0,EpitheliumLung=4e+08,InfectedAPC=0,IL6=0,ResistantEpithelium=0,IFNA1=0,TcLymphnode=0,ActivatedAPCLymphnode=0,A=100000,EpiKilledbyIFN=0,EpiKilledbyIL6=0,EpiKilledbyTc=0,EpiKilledbyVirus=0,Tnaive=1E5,IgG=0,IgM=0)
