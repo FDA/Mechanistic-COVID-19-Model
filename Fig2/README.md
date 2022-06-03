@@ -78,6 +78,7 @@ Also note that the figures in our manuscript were created by running the *so ver
    parser<-add_option(parser, c("-c", "--case"), default="Population", help="options: 'Population' or 'Optimum'")
 
    
+   As can be seen from above, one needs to run the script twice, once for severe and once for mild patients, to generate the full Fig 2. 
    Of note, for any of the runs above, to use the compiled model (*.so version of the model) for faster running under linux, one should use the command line option -m. For example:    
 		Rscript Main.R -m C  
 
