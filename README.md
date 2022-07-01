@@ -1,7 +1,8 @@
 ## Repository Structure--------------------------------------
 This repository contains folders corresponding to the simulation figures in the main text of our maniscript with the title:
-"Calibration and Validation of a Mechanistic COVID-19 Model for Translational Quantitative Systems Pharmacology – A Proo-of-Concet Model Development for Remdesivir"  
-
+["Calibration and Validation of a Mechanistic COVID-19 Model for Translational Quantitative Systems Pharmacology – A Proo-of-Concet Model Development for Remdesivir"](https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2686)  
+Paper's link: 
+https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2686
 
 ## Description of Folders------------------------------------
 
