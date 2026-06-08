@@ -1,3 +1,10 @@
+o	This repository has been archived and is no longer maintained.
+o	The code is provided for historical reference and may contain unpatched or unknown vulnerabilities.
+o	It should not be used in production systems.
+
+
+
+
 ## Repository Structure--------------------------------------
 This repository contains folders corresponding to the simulation figures in the main text of our paper with the title:
 ["Calibration and Validation of a Mechanistic COVID-19 Model for Translational Quantitative Systems Pharmacology – A Proo-of-Concet Model Development for Remdesivir"](https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.2686)  
